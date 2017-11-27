@@ -77,7 +77,7 @@ if (isset($_POST['counter'])) {
             $photo = trim($_d['member_image'])?trim($_d['member_image']):'person.png';
             $_institution = trim($_d['inst_name'])?"'".$_d['inst_name']."'":'NULL';
             $_checkin_date = date('Y-m-d H:i:s');
-            $_i = $dbs->query("INSERT INTO visitor_count (member_id, member_name, institution, checkin_date) VALUES ('$member_id', '$member_name', $_institution, '$_checkin_date')");
+            $_i = $dbs->query("INSERT INTO visitor_count (member_id, member_name, institution, checkin_date) VALUES ('$member_id', '$member_name', '$_institution', '$_checkin_date')");
         } else {
             // non member
             $_d = $_q->fetch_assoc();
